@@ -98,6 +98,7 @@ public class UserService implements CommunityConstant {
         return map;
     }
 
+    //进行激活操作
     public int activation(int userId, String code){
         User user = userMapper.selectById(userId);
         if (user.getStatus()==1){
