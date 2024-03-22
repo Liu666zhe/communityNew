@@ -44,13 +44,14 @@ public class UserController {
     @Autowired
     private HostHolder hostHolder;
 
-
+    //获取个人信息设置页面
     @RequestMapping(path = "/setting",method = RequestMethod.GET)
     @LoginRequired
     public String getSettingPage(){
         return "/site/setting";
     }
 
+    //向服务器上传图片
     @RequestMapping(path = "/upload",method =RequestMethod.POST )
     @LoginRequired
     public String uploadHeader(MultipartFile headerImage, Model model){
@@ -83,7 +84,7 @@ public class UserController {
         return "redirect:/index";
     }
 
-    //获取图片
+    //从服务器获取图片
     @RequestMapping(path = "/header/{fileName}",method = RequestMethod.GET)
     public void getHeader(@PathVariable("fileName") String fileName, HttpServletResponse response){
         //服务器存放路径
@@ -105,4 +106,12 @@ public class UserController {
             logger.error("读取头像失败: " + e.getMessage());
         }
     }
+
+    //修改密码
+    //{
+    //    //判断原密码是否正确，且长度小于8位
+    //    //用hostHolder获取当前user对象,获取密码，判断密码是否正确
+    //    //判断新密码
+    //
+    //}
 }

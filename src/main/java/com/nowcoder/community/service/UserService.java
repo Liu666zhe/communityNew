@@ -44,6 +44,7 @@ public class UserService implements CommunityConstant {
         return userMapper.selectById(id);
     }
 
+    //编写注册业务
     public Map<String,Object> register(User user){
         Map<String, Object> map = new HashMap<>();
         //空值处理
@@ -163,6 +164,7 @@ public class UserService implements CommunityConstant {
         return loginTicketMapper.selectByTicket(ticket);
     }
 
+    //更新头像业务
     public int updateHeader(int userId, String headerUrl){
         return userMapper.updateHeader(userId,headerUrl);
     }
