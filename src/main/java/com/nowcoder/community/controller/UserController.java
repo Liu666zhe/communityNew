@@ -79,7 +79,7 @@ public class UserController {
         }
         //更新当前用户头像的路径（web访问路径）
         User user = hostHolder.getUser();
-        String headerUrl = domain+contextPath+"/user/header"+fileName;
+        String headerUrl = domain+contextPath+"/user/header/"+fileName;
         userService.updateHeader(user.getId(),headerUrl);
         return "redirect:/index";
     }
