@@ -16,9 +16,7 @@
         values (#{userId},#{title},#{content},#{type},#{status},#{createTime},#{commentCount},#{score})
     </insert>
     <update id="updateCommentCount">
-        update discuss_post
-        set comment_count = #{commentCount}
-        where id = #{id}
+        update discuss_post set comment_count = #{commentCount} where id = #{id}
     </update>
 
     <select id="selectDiscussPosts" resultType="DiscussPost">
