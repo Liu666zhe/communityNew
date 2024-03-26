@@ -81,6 +81,7 @@ public class RedisTests {
                 String redisKey = "text:tx";
                 //启用事务
                 operations.multi();
+
                 operations.opsForSet().add(redisKey, "zhangsan");
                 operations.opsForSet().add(redisKey, "lisi");
                 operations.opsForSet().add(redisKey, "wangwu");
