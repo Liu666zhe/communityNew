@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 @Mapper
+@Deprecated
 public interface LoginTicketMapper {
 
     @Insert("insert into login_ticket (user_id, ticket, status, expired) VALUES (#{userId},#{ticket},#{status},#{expired})")
