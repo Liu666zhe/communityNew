@@ -104,7 +104,11 @@
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 			<version>3.2.2</version>
 		</dependency>
-
+<!--kafka依赖-->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
 
     </dependencies>
 
